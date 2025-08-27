@@ -25,12 +25,12 @@ class DictionaryAssistant:
         self.setup_voice_recognition()
 
     def setup_voice_recognition(self):
-        # ИСПРАВЛЕНИЕ: используем английскую модель
+
         if not os.path.exists("model-en"):
             print("English Vosk model not found! Download from https://alphacephei.com/vosk/models")
             return
 
-        self.model = Model("model-en")  # Английская модель
+        self.model = Model("model-en")
         self.samplerate = 16000
         self.device = 1
         self.q = queue.Queue()
